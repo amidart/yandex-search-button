@@ -1,12 +1,13 @@
 window.onload = function () {
   var button = document.createElement("div");
-  button.style.display = 'inline-block';
-  button.innerHTML = '<button id="gbqfb2" aria-label="Yandex Search" class="gbqfb" name="btnY" style="color:#000!important;margin-left:15px;background-image:-webkit-linear-gradient(top,#fff09c,#f4be02);"><span style="color: red">Я</span>ндекс</button>';
+  button.style.cssText = 'display:inline-block; vertical-align: top';
+  button.innerHTML = '<button value="Search" style="width:60px;height:30px;border-radius:2px;background-color:#ffdb4c;border:solid 2px #fc0;"><span style="color: red">Y</span>andex</button>';
   button.onclick = function() {
     var subdomain = '';
-    if (document.getElementById('rg_s')) subdomain = 'images.';
-    var url = 'http://' + subdomain + 'yandex.ru/yandsearch?text=' + encodeURIComponent(document.getElementById('gbqfq').value);
+    if (document.querySelector('.hdtb_msel').textContent === 'Images') subdomain = 'images.';
+    var url = 'http://' + subdomain + 'yandex.ru/yandsearch?text=' + encodeURIComponent(document.querySelector('#lst-ib').value);
     var win = window.open(url, '_blank');
   };
-  document.getElementById('gbqfbw').appendChild(button);
+  document.querySelector('#sbds').appendChild(button);
+  document.querySelector('.lsbb.kpbb').style.display = 'inline-block';
 };
