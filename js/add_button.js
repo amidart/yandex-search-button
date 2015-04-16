@@ -4,7 +4,7 @@ window.onload = function () {
   button.innerHTML = '<button value="Search" style="width:60px;height:30px;border-radius:2px;background-color:#ffdb4c;border:solid 2px #fc0;"><span style="color: red">Y</span>andex</button>';
   button.onclick = function() {
     var subdomain = '';
-    if (document.querySelector('.hdtb_msel').textContent === 'Images') subdomain = 'images.';
+    if (document.querySelector('.hdtb-msel').textContent === 'Images') subdomain = 'images.';
     var url = 'http://' + subdomain + 'yandex.ru/yandsearch?text=' + encodeURIComponent(document.querySelector('#lst-ib').value);
     var win = window.open(url, '_blank');
   };
