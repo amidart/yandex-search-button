@@ -1,7 +1,7 @@
 window.onload = function () {
   var button = document.createElement("div");
   button.style.cssText = 'display:inline-block; vertical-align: top';
-  button.innerHTML = '<button value="Search" style="width:60px;height:30px;border-radius:2px;background-color:#ffdb4c;border:solid 2px #fc0;"><span style="color: red">Y</span>andex</button>';
+  button.innerHTML = '<button value="Search" style="width:60px;height:40px;border-radius:2px;background-color:#ffdb4c;border:solid 2px #fc0;cursor:pointer"><span style="color: red">Y</span>andex</button>';
   button.onclick = function() {
     var subdomain = '';
     if (document.querySelector('.hdtb-msel').textContent === 'Images') subdomain = 'images.';
