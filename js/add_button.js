@@ -8,7 +8,7 @@ window.onload = function () {
     var url = 'http://' + subdomain + 'yandex.ru/yandsearch?text=' + encodeURIComponent(document.querySelector('#lst-ib').value);
     var win = window.open(url, '_blank');
   };
-  document.querySelector('#sbtc .sbibtd').appendChild(button);
-  document.querySelector('#sfdiv').style.display = 'inline-block';
-  document.querySelector('#sfdiv').style.width = '100%';
+  document.querySelector('#tsf').appendChild(button);
+  document.querySelector('#tsf').style.maxWidth = 'none';
+  document.querySelector('#tsf > div[jsmodel]').style.display = 'inline-block';
 };
