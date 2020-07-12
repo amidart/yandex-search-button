@@ -1,17 +1,19 @@
+"use strict";
 window.onload = function () {
-  var button = document.createElement("div");
-  button.style.cssText = 'position:absolute;right:-65px;top:0;';
-  button.innerHTML = '<button type="button" value="Search" style="width:60px;height:44px;border-radius:2px;background-color:#ffdb4c;border:solid 2px #fc0;cursor:pointer"><span style="color: red">Y</span>andex</button>';
-  button.onclick = function() {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add('plgn-ybtn-srch');
+  wrapper.innerHTML = `<button type="button" aria-label="Search in Yandex" class="plgn-ybtn-srch__btn"><span class="plgn-ybtn-srch__icon-wrapper"><span class="plgn-ybtn-srch__icon"></span></span></button>`;
+  const btn = wrapper.querySelector('button');
+  btn.onclick = function() {
     let partUrl = "https://yandex.ru/yandsearch";
     if (document.querySelector('.F7UV7d')){
       partUrl = "https://yandex.ru/images/search";
     };
-    var url = partUrl+'?text=' + encodeURIComponent(document.querySelector('input[name=q]').value);
-    var win = window.open(url, '_blank');
+    const url = partUrl+'?text=' + encodeURIComponent(document.querySelector('input[name=q]').value);
+    const win = window.open(url, '_blank');
   };
-  var target = document.querySelector('#sbtc, [jsname=RNNXgb]');
+  const target = document.querySelector('#sbtc, [jsname=RNNXgb]');
   if (!target) return;
-  target.appendChild(button);
-  target.style.position = 'relative';
+  target.appendChild(wrapper);
+  // target.style.position = 'relative';
 };
