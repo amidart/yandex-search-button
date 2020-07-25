@@ -29,6 +29,7 @@
         "*://www.google.uz/*"
       ],
       "js": ["js/add_button.js"],
+      "css": ["css/btn.css"],
       "run_at": "document_end"
     }
   ]
